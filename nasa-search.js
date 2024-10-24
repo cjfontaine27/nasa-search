@@ -56,6 +56,20 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     `];
   }
 
+  updated(changedProperties) {
+    // see if value changes from user input and is not empty
+    if (changedProperties.has('value') && this.value) {
+      this.updateResults(this.value);
+    }
+    else if (changedProperties.has('value') && !this.value) {
+      this.items = [];
+    }
+    // @debugging purposes only
+    if (changedProperties.has('items') && this.items.length > 0) {
+      console.log(this.items);
+    }
+  }
+
   // Lit render the HTML
   render() {
     return html`
@@ -76,19 +90,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     </div>
     `;
   }
-  updated(changedProperties) {
-    // see if value changes from user input and is not empty
-    if (changedProperties.has('value') && this.value) {
-      this.updateResults(this.value);
-    }
-    else if (changedProperties.has('value') && !this.value) {
-      this.items = [];
-    }
-    // @debugging purposes only
-    if (changedProperties.has('items') && this.items.length > 0) {
-      console.log(this.items);
-    }
-  }
+  
 
   inputChanged(e) {
     this.value = this.shadowRoot.querySelector('#input').value;
