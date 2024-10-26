@@ -56,6 +56,24 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         transition: .5s all ease-in-out;
       }
 
+      .card{
+        width: 240px;
+        margin: 16px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .card:hover {
+        background-color: #f0f0f0;
+      }
+
+      img {
+        width: 240px;
+        height: 160px; /* uniform height */
+        object-fit: cover;
+      }
+
       details {
         margin: 16px;
         padding: 16px;
