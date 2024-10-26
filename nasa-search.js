@@ -138,4 +138,4 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-customElements.define(nasaSearch.tag, nasaSearch);
+globalThis.customElements.define(nasaSearch.tag, nasaSearch);
