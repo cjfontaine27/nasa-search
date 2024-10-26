@@ -61,7 +61,6 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         margin: 16px;
         border: 1px solid #ddd;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
       }
 
       .card:hover {
@@ -74,17 +73,39 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         object-fit: cover;
       }
 
+      .card-content {
+        padding: 8px;
+      }
+
+      .card-content h3 {
+        font-size: 18px;
+        margin: 8px 0;
+      }
+
+      .card-content p {
+        font-size: 14px;
+        color: #555;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
       details {
         margin: 16px;
         padding: 16px;
         background-color: blue;
       }
+
       summary {
         font-size: 24px;
         padding: 8px;
         color: white;
         font-size: 42px;
       }
+
       input {
         font-size: 20px;
         line-height: 40px;
