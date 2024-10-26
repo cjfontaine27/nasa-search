@@ -54,43 +54,46 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         opacity: 1;
         transition-delay: .5s;
         transition: .5s all ease-in-out;
+        padding: 16px;
       }
 
-      .card{
+      .nasa-card{
         width: 240px;
         margin: 16px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
         border: 1px solid #ddd;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      .card:hover {
+      .nasa-card:hover {
         background-color: #f0f0f0;
       }
 
-      img {
+      .nasa-card img {
         width: 240px;
         height: 160px; /* uniform height */
         object-fit: cover;
+        display: block;
       }
 
       .card-content {
         padding: 8px;
       }
 
-      .card-content h3 {
-        font-size: 18px;
-        margin: 8px 0;
-      }
-
-      .card-content p {
-        font-size: 14px;
-        color: #555;
-      }
-
-      a {
+    
+      .nasa-card a {
         text-decoration: none;
         color: inherit;
         display: block;
+      }
+
+      .card-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 8px 0;
+        line-height: 1.4;
       }
 
       details {
@@ -139,7 +142,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     <details open>
       <summary>Search inputs</summary>
       <div>
-        <input id="input" placeholder="Search NASA images" @input="${this.inputChanged}" />
+        <input id="input" placeholder="Search NASA images" @input="${this.inputChanged}" @keyup="${(e) => e.key === 'Enter' && this.updateResults(this.value)}"/>
       </div>
     </details>
     <div class="results">
