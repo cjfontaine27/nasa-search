@@ -57,45 +57,6 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         padding: 16px;
       }
 
-      .nasa-card{
-        width: 240px;
-        margin: 16px;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .nasa-card:hover {
-        background-color: #f0f0f0;
-      }
-
-      .nasa-card img {
-        width: 240px;
-        height: 160px; /* uniform height */
-        object-fit: cover;
-        display: block;
-      }
-
-      .card-content {
-        padding: 8px;
-      }
-
-    
-      .nasa-card a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-
-      .card-title {
-        font-size: 16px;
-        font-weight: 600;
-        margin: 0 0 8px 0;
-        line-height: 1.4;
-      }
-
       details {
         margin: 16px;
         padding: 16px;
