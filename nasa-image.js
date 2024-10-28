@@ -24,7 +24,7 @@ export class NasaImage extends LitElement {
     }
 
     .image:hover {
-      background-color: purple;
+    background-color: purple;
     }
 
     .image div {
@@ -46,7 +46,7 @@ export class NasaImage extends LitElement {
     return html`
     <a href="${this.source}" target="_blank">
       <div class="image">
-        <img src="${this.source}" alt="${this.title}"/>
+        <img src="${this.source}" alt="${this.title}" alt="${this.owner}" />
         <div>${this.title}</div>
         <div>${this.owner}</div>
       </div>
