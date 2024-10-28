@@ -18,7 +18,6 @@ export class NasaImage extends LitElement {
   static get styles() {
     return [css`
     
-
     .image {
     display: inline-block;
     width: 240px;
@@ -27,7 +26,6 @@ export class NasaImage extends LitElement {
     .image:hover {
       background-color: purple;
     }
-
 
     .image div {
     max-width: 200px;
