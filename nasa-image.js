@@ -61,4 +61,4 @@ export class NasaImage extends LitElement {
     return "nasa-image";
   }
 }
-customElements.define(NasaImage.tag, NasaImage);
+globalThis.customElements.define(NasaImage.tag, NasaImage);
