@@ -109,6 +109,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
         title="${item.data[0].title}"
         owner="${item.data[0].secondary_creator}"
       ></nasa-image>
+      <h3>${this.owner}</h3>
       `)}
     </div>
     `;
