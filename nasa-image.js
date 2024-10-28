@@ -48,13 +48,6 @@ export class NasaImage extends LitElement {
         <img src="${this.source}" />
         <div>${this.title}</div>
     </div>
-    <a href="${this.source}" target="_blank">
-        <div class="image">
-          <img src="${this.source}" alt="${this.title}" />
-          <div>${this.title}</div>
-          <div>${this.owner}</div>
-        </div>
-      </a>
     `;
   }
   static get tag() {
