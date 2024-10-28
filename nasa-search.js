@@ -96,6 +96,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
     <h2>${this.title}</h2>
+    <h3>${this.owner}</h3>
     <details open>
       <summary>Search inputs</summary>
       <div>
