@@ -21,7 +21,13 @@ export class NasaImage extends LitElement {
 
     .image {
     display: inline-block;
+    width: 240px;
     }
+
+    .image:hover {
+      background-color: purple;
+    }
+
 
     .image div {
     max-width: 200px;
@@ -31,8 +37,8 @@ export class NasaImage extends LitElement {
 
     .image img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     }
 
     `];
@@ -44,6 +50,13 @@ export class NasaImage extends LitElement {
         <img src="${this.source}" />
         <div>${this.title}</div>
     </div>
+    <a href="${this.source}" target="_blank">
+        <div class="image">
+          <img src="${this.source}" alt="${this.title}" />
+          <div>${this.title}</div>
+          <div>${this.owner}</div>
+        </div>
+      </a>
     `;
   }
   static get tag() {

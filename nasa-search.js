@@ -117,9 +117,6 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     `;
   }
 
-  somerandommethod(e){
-    window.open("whatever.com", "blank");
-  }
 
   updated(changedProperties) {
     // see if value changes from user input and is not empty
@@ -142,7 +139,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     <details open>
       <summary>Search inputs</summary>
       <div>
-        <input id="input" placeholder="Search NASA images" @input="${this.inputChanged}" @keyup="${(e) => e.key === 'Enter' && this.updateResults(this.value)}"/>
+        <input id="input" placeholder="Search NASA images" @input="${this.inputChanged}"/>
       </div>
     </details>
     <div class="results">
@@ -150,6 +147,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
       <nasa-image
         source="${item.links[0].href}"
         title="${item.data[0].title}"
+        owner="${item.data[0].secondary_creator}"
       ></nasa-image>
       `)}
     </div>
